@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Парикмахер Валентина</title>
+
+  <!-- Подключение SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f6d365, #fda085);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      background: url('https://media.istockphoto.com/id/1155881853/ro/fotografie/coafor-fat%C4%83-care-%C8%9Bine-foarfeca-%C3%AEn-prim-plan-m%C3%A2inile-de-aproape.jpg?s=2048x2048&w=is&k=20&c=AqIcDNASVrn6rjKBbgGD2LsM0wr6W_Yo3KBjDUC0ryc=') no-repeat center/cover;
+      color: white;
+      text-shadow: 0 2px 5px rgb(0, 0, 0);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #ffffff00;
+      color: #f97e51;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #f1f1f160;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.211);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #f97f51;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #e8653c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Парикмахер Валентина</h1>
+    <p>Современные стрижки и укладки</p>
+    <a href="#contact" class="button">Записаться</a>
+  </header>
+
+  <section>
+    <h2>Почему выбирают меня?</h2>
+    <p>✔ Более 10 лет опыта<br/>
+       ✔ Индивидуальный подход<br/>
+       ✔ Работаю с топовыми брендами<br/>
+       ✔ Приятная атмосфера</p>
+  </section>
+
+  <section id="contact">
+    <h2>Записаться на стрижку</h2>
+    <form action="https://formspree.io/f/mwpqveog" method="POST">
+  <input type="text" name="Имя" placeholder="Ваше имя" required />
+  <input type="tel" name="Телефон" placeholder="Телефон для связи" required />
+  <textarea name="Комментарий" placeholder="Комментарий или пожелание"></textarea>
+  <button type="submit">Отправить</button>
+</form>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Парикмахер Валентина | г. Симферополь | +7 (978) 212-25-26
+  </footer>
+
+  <script>
+    function showThankYouMessage(event) {
+      event.preventDefault(); // Остановить отправку формы
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Спасибо!',
+        text: 'Ваша заявка отправлена.',
+        confirmButtonColor: '#f97f51'
+      });
+
+      // Очистить форму (не обязательно, но удобно)
+      event.target.reset?.();
+      return false;
+    }
+  </script>
+
+</body>
+</html>
